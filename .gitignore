@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore DS Store
 .DS_Store
+
+# data directory 
+data
