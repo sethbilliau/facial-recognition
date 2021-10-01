@@ -7,5 +7,5 @@ tensorflow==2.6.0
 keras>=2.0.0
 opencv-python>=4.1
 wand==0.6.7
-facenet-pytorch 
+facenet-pytorch==2.4.1
 mtcnn==0.1.0
