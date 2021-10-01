@@ -4,6 +4,8 @@ FROM python:3.8-slim
 # Update apt-get and install some stuff
 RUN apt-get -y update
 RUN apt-get install git wget vim gcc g++ imagemagick -y 
+RUN apt-get update ##[edited]
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 
 # Now copy over the python requirements and install them
 WORKDIR /app

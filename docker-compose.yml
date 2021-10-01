@@ -1,7 +1,10 @@
-version: '3'
+version: '3.7'
 services:
   notebook:
     build:
-      context: ./jupyter-notebook-docker
+      context: ./
+      dockerfile: Dockerfile
     ports:
       - "8888:8888"
+    volumes:
+     - ./data
