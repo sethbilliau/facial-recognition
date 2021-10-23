@@ -22,7 +22,7 @@ for file in os.listdir(SourceFolder):
     if file == ".DS_Store": 
         continue
     SourceFile=SourceFolder + "/" + file
-    TargetFile=TargetFolder + "/" + fileprefix + str(counter) + ".JPG" 
+    TargetFile=TargetFolder + "/" + fileprefix + str(counter) + ".jpg" 
     print(TargetFile)
 
     counter += 1
