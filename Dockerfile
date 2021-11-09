@@ -3,7 +3,7 @@ FROM python:3.8-slim
 
 # Update apt-get and install some stuff
 RUN apt-get -y update
-RUN apt-get install git wget vim gcc g++ imagemagick -y 
+RUN apt-get install git wget vim gcc g++ imagemagick -y
 RUN apt-get update ##[edited]
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get install -y --fix-missing \
@@ -38,6 +38,7 @@ RUN cd ~ && \
 # Now copy over the python requirements and install them
 WORKDIR /app
 COPY . .
+RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 RUN python -m pip install torch==1.9.1+cpu torchvision==0.10.1+cpu torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 RUN python -m pip install facenet-pytorch==2.4.1

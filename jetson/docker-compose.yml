@@ -7,6 +7,6 @@ services:
     ports:
       - "8888:8888"
     volumes:
-     - ~/Documents/GitHub/bah-facial-recognition:/app
+     - ~/Documents/GitHub/bah-facial-recognition/jetson:/app
     # devices:
     # - /dev/video0:/dev/video0
