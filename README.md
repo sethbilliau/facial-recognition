@@ -42,3 +42,16 @@ Week 5
 
 Week 6: 
 - 10/21: Seth and Ryan identify a state-of-the-art [dlib](http://dlib.net/) facial recognition library based on FaceNet to create sparse, 128-dimension encodings for faces, along with support for face detection. We opt to continue using MTCNN for our own face detection, but use this library's face encodings to perform facial recognition. Seth completes the training pipeline by creating k-nn classifier in the 128-dimensional latent space. This should be fast enough to perform live motion video inference. Seth begins to create an inference pipeline for facial recognition with his MacBook Pro web camera. 
+
+Week 7
+- 10/28: Seth created a notebook for inference on still images. This uses matplotlib to place bounding boxes around faces and text labels that are overlaid on the original images. Seth wants to create an additional pipeline to do inference in near real time. We want to make something that looks like it's full motion video by classifying images very quickly while also plotting bounding boxes and text labels. There appears to be some boilerplate code in the face recognition library that we can use for this. We will first implement this using my host webcam and then transition to using a logitech camera on a Jetson Nano. 
+
+Week 8
+- 11/4: Seth has implemented inference on full motion video. However, it doesn't work on the container - it only works if you run the script with direct access to the host machine. Since the end goal is to do inference on an Edge device, we won't worry about fixing this. Seth and Ryan's main goal for next week is to create an inference container that will run on a docker image. Seth will spend the next week researching docker images for Jetson Nanos and look to stand up a container. 
+
+Week 9
+- 11/10: Seth has run into several roadblocks trying to get the existing image onto a Jetson nano. It turns out that you need to run special L4T images on Jetson nanos in order to get things to work. However, we've finally found [some promising documentation](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-ml) from NVIDIA and are looking into using this. In the meantime, Ryan is going to reach back out to Mike Sellers at the Edge AI lab in order to get the ball rolling on a collaboration in the near future. 
+- 11/12: Seth finally succeeds in getting a working container on the Jetson nano. He's still working on getting some small bugs worked out, but this is good progress prior to meeting with Mike. 
+
+Week 10
+- 11/15: Seth, Ryan, and Mike meet and set up three 60 to 90 min working sessions on 11/22-11/24 to extend this project to Edge devices in the AI lab. The Edge lab can also provide diagnostic performance metrics on how the app functions. It's great that Seth has been able to get things working on his own Jetson nano, but it would be great to put this project on other devices - plus, a goal of the Edge lab is to reduce the cost of transitioning a project from one device to another, so collaboration seems really natural. Seth and Ryan are hopeful that this collaboration might lead to a demo in the Edge AI lab. 
