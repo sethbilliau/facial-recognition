@@ -133,3 +133,7 @@ dmypy.json
 
 # data directory 
 data
+
+# No duplicity
+jetson/FaceNet
+jetson/facenet_keras_weights.h5
